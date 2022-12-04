@@ -1,8 +1,7 @@
 import functools
 
-lines = open("real.txt", "r").read().split("\n")
-#lines = open("test.txt", "r").read().split("\n")
-
+#lines = open("real.txt", "r").read().split("\n")
+lines = open("test.txt", "r").read().split("\n")
 
 def count_item(items):
     m = {}
