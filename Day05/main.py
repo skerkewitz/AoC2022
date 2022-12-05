@@ -10,7 +10,6 @@ stack_count = 9
 
 stacks = [[] for i in range(0, stack_count)]
 for s in stack:
-    s : str = s
     for i in range(0, stack_count):
         stacks[i].append(s[1 + (i * 4)])
 
@@ -31,9 +30,7 @@ def parse_moves(move_string: str):
 
 
 def perform_moves_part1(moves, stacks):
-    for m in moves:
-        (num, source, dest) = m
-
+    for (num, source, dest) in moves:
         for i in range(0, num):
             stacks[dest - 1].insert(0, stacks[source - 1].pop(0))
 
@@ -41,9 +38,7 @@ def perform_moves_part1(moves, stacks):
 
 
 def perform_moves_part2(moves, stacks):
-    for m in moves:
-        (num, source, dest) = m
-
+    for (num, source, dest) in moves:
         temp = []
         for i in range(0, num):
             temp.insert(0, stacks[source - 1].pop(0))
